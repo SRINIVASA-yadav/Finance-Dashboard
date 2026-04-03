@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <div class="menu-container">
+        <button id="menuButton" type="button">☰ Menu</button>
+        <div id="menuDropdown" class="menu-dropdown">
+          <button id="profileButton">Profile</button>
+          <button id="helpButton">Help</button>
+          <button id="logoutButton">Logout</button>
+          <button id="themeToggle">Dark Mode</button>
+        </div>
+      </div>
+    </div>
+    <h1>Finance Dashboard</h1>
+    <div class="header-right">
+      <select id="roleSelect">
+        <option value="viewer">Viewer</option>
+        <option value="admin">Admin</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview">
+      <h2>Overview</h2>
+      <div class="cards">
+        <div class="card" id="totalBalance">Total Balance: $0</div>
+        <div class="card" id="totalIncome">Total Income: $0</div>
+        <div class="card" id="totalExpenses">Total Expenses: $0</div>
+      </div>
+      <div class="chart-container">
+        <canvas id="balanceChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="spendingChart"></canvas>
+      </div>
+    </section>
+
+    <section id="transactions">
+      <h2>Transactions</h2>
+      <div class="filters">
+        <input type="text" id="searchInput" placeholder="Search by category...">
+        <select id="typeFilter">
+          <option value="">All Types</option>
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <select id="sortSelect">
+          <option value="date_desc">Date ↓</option>
+          <option value="date_asc">Date ↑</option>
+          <option value="amount_desc">Amount ↓</option>
+          <option value="amount_asc">Amount ↑</option>
+        </select>
+        <div class="export-buttons">
+          <select id="exportFormat">
+            <option value="csv">Export CSV</option>
+            <option value="json">Export JSON</option>
+          </select>
+          <button id="exportButton" type="button">Export</button>
+        </div>
+      </div>
+      <table id="transactionsTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="insights">
+      <h2>Insights</h2>
+      <p id="highestSpending">Highest spending category: </p>
+      <p id="monthlyComparison">Monthly comparison: Income vs Expenses</p>
+      <p id="additionalInsight">Overall trend: </p>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
