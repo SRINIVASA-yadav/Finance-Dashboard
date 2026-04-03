@@ -1,6 +1,6 @@
 # Finance Dashboard
 
-A simple, interactive finance dashboard built with plain HTML, CSS, and JavaScript. Designed for beginners to learn frontend development basics.
+A simple, interactive finance dashboard built with React and JavaScript. Designed for beginners to learn frontend development basics.
 
 ## Features
 
@@ -13,23 +13,24 @@ A simple, interactive finance dashboard built with plain HTML, CSS, and JavaScri
 
 ## Technologies Used
 
-- HTML5
-- CSS3 (Flexbox for layout)
+- React 18 (with JSX)
 - JavaScript (ES6+)
 - Chart.js for visualizations
+- HTML5
+- CSS3 (Flexbox for layout)
 
 ## Setup Instructions
 
 1. Clone or download the project files.
 2. Open `index.html` in a web browser (Chrome, Firefox, etc.).
-3. No server or build process required - it's a static site.
+3. No server or build process required - it's a static site using CDN React.
 4. You can also click this link in Markdown preview: [Open index.html](./index.html)
 
 ## Project Structure
 
-- `index.html`: Main HTML file with the dashboard layout.
+- `index.html`: Main HTML file with React CDN scripts.
 - `style.css`: Styles for responsive design and UI.
-- `script.js`: JavaScript logic for data handling, rendering, and interactions.
+- `script.js`: React components and logic using JSX.
 - `data.js`: Mock transaction data.
 - `.github/copilot-instructions.md`: Project setup checklist.
 
